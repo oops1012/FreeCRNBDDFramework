@@ -1,16 +1,16 @@
 package StepDefinitions;
 
-import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import Util.*;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.MyDashboardPage;
-
-import java.util.List;
 
 public class LoignStepDefs {
     //WebDriver driver;
@@ -44,7 +44,7 @@ public class LoignStepDefs {
     public void userLogoutSuccessfully() {
         MyDashboardPage dash = new MyDashboardPage(Utilities.driver);
         dash.signOut();
-        Utilities.driver.quit();
+        Utilities.driver.close();
 
     }
 
@@ -57,30 +57,9 @@ public class LoignStepDefs {
 
 
     @And("^Login with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void loginWithAnd(String email, String password)  {
+    public void loginWithAnd(String email, String password) throws Throwable {
         LoginPage lg = new LoginPage(Utilities.driver);
         lg.login(email,password);
-    }
-
- /*   @When("^Login with correct login credentials")
-    public void loginWithCorrectAnd(DataTable loginData) {
-        List<List<String>> loginCreds = loginData.raw();
-        String email = loginCreds.get(0).get(0);
-        String password = loginCreds.get(0).get(1);
-        LoginPage lg = new LoginPage(Utilities.driver);
-        lg.login(email,password);
-
-    }*/
-
-
-    @And("^Login with correct login credentials$")
-    public void login_with_correct_login_credentials(DataTable loginData) {
-        List<List<String>> loginCreds = loginData.raw();
-        String email = loginCreds.get(0).get(0);
-        String password = loginCreds.get(0).get(1);
-        LoginPage lg = new LoginPage(Utilities.driver);
-        lg.login(email,password);
-
+        throw new PendingException();
     }
 }
-

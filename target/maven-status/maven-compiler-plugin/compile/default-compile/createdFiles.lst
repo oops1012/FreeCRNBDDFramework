@@ -1,6 +1,0 @@
-pages\MyDashboardPage.class
-Util\Utilities.class
-StepDefinitions\LoignStepDefs.class
-pages\LoginPage.class
-Runner\testRunner.class
-pages\HomePage.class

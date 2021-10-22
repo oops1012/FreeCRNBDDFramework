@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "D:\\Automation\\SLC\\FreeCRNBDDFramework\\src\\main\\java\\Features",
-        glue = {"D:\\Automation\\SLC\\FreeCRNBDDFramework\\src\\main\\java\\StepDefinitions"},
-        format = {"pretty", "html:test-output", "json:json_output/cucumber.json"}
-       // , dryRun = true
+         features = {"src\\main\\java\\Features"}
+         ,glue = {"StepDefinitions"}
+        ,format = {"pretty", "html:test-output", "json:json_output/cucumber.json"}
+       , dryRun = false
 )
 
 public class testRunner {

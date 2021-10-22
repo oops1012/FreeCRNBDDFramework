@@ -22,19 +22,19 @@
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-core</artifactId>
-      <version>1.2.5</version>
+      <version>1.2.6</version>
     </dependency>
 
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>1.2.5</version>
+      <version>1.2.6</version>
     </dependency>
 
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-junit</artifactId>
-      <version>1.2.5</version>
+      <version>1.2.6</version>
     </dependency>
 
 
@@ -94,6 +94,12 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations-java5</artifactId>
+      <version>RELEASE</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
