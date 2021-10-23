@@ -23,7 +23,7 @@ Feature: Login Action
   Scenario: Login with valid credential
     Given User on Home page
     When User go to login page
-    When Login with correct login credentials
+    And Login with correct login credentials
       | test1212@gmail.com | 123456 |
    # Then My Dashboard is displayed
     Then User logout successfully

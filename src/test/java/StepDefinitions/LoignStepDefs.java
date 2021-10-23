@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -12,9 +13,11 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.MyDashboardPage;
 
+import java.util.List;
+
 public class LoignStepDefs {
     //WebDriver driver;
-
+/*
     @Given("^User on Home page$")
     public void user_on_Home_page() {
     Utilities.driverSetup();
@@ -27,12 +30,20 @@ public class LoignStepDefs {
         hp.navigateTolnk_LoginPage();
     }
 
-
     @And("^Login with correct credentials$")
+    public void userAndPasswordValueEntered(DataTable loginData) {
+        List<List<String>> loginCreds = loginData.raw();
+        String email = loginCreds.get(0).get(0);
+        String password = loginCreds.get(0).get(1);
+        LoginPage lg = new LoginPage(Utilities.driver);
+        lg.login(email,password);
+    }
+
+  *//*  @And("^Login with correct credentials$")
     public void userAndPasswordValueEntered() {
         LoginPage lp = new LoginPage(Utilities.driver);
         lp.login();
-    }
+    }*//*
 
     @Then("^My Dashboard is displayed$")
     public void MyDashboardpageIsDisplayed() throws Exception {
@@ -57,9 +68,9 @@ public class LoignStepDefs {
 
 
     @And("^Login with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void loginWithAnd(String email, String password) throws Throwable {
+    public void loginWithAnd(String email, String password) {
         LoginPage lg = new LoginPage(Utilities.driver);
         lg.login(email,password);
-        throw new PendingException();
-    }
+
+    }*/
 }

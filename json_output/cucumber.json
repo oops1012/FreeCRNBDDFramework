@@ -3,133 +3,161 @@
     "line": 1,
     "elements": [
       {
-        "comments": [
-          {
-            "line": 2,
-            "value": "#"
-          },
-          {
-            "line": 3,
-            "value": "#  Scenario: Login with valid credential"
-          },
-          {
-            "line": 4,
-            "value": "#    Given User on Home page"
-          },
-          {
-            "line": 5,
-            "value": "#    When User go to login page"
-          },
-          {
-            "line": 6,
-            "value": "#    And Login with correct credentials"
-          },
-          {
-            "line": 7,
-            "value": "#   # Then My Dashboard is displayed"
-          },
-          {
-            "line": 8,
-            "value": "#    Then User logout successfully"
-          },
-          {
-            "line": 11,
-            "value": "#  Scenario Outline: Login with valid credential"
-          },
-          {
-            "line": 12,
-            "value": "#    Given User on Home page"
-          },
-          {
-            "line": 13,
-            "value": "#    When User go to login page"
-          },
-          {
-            "line": 14,
-            "value": "#    And Login with \"\u003cusername\u003e\" and \"\u003cpassoword\u003e\""
-          },
-          {
-            "line": 15,
-            "value": "#   # Then My Dashboard is displayed"
-          },
-          {
-            "line": 16,
-            "value": "#    Then User logout successfully"
-          },
-          {
-            "line": 17,
-            "value": "#    Examples:"
-          },
-          {
-            "line": 18,
-            "value": "#      | username           | passoword |"
-          },
-          {
-            "line": 19,
-            "value": "#      | test1212@gmail.com | 123456    |"
-          }
-        ],
-        "line": 23,
+        "line": 3,
         "name": "Login with valid credential",
         "description": "",
-        "id": "login-action;login-with-valid-credential",
+        "id": "login-action-with-map;login-with-valid-credential",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 9410211400,
+              "status": "passed"
             },
-            "line": 24,
+            "line": 4,
             "name": "User on Home page",
             "match": {
-              "location": "LoignStepDefs.user_on_Home_page()"
+              "location": "LoginWithMap.user_on_Home_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1817267300,
+              "status": "passed"
             },
-            "line": 25,
+            "line": 5,
             "name": "User go to login page",
             "match": {
-              "location": "LoignStepDefs.goTo_LoingPage()"
+              "location": "LoginWithMap.goTo_LoingPage()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 3416500,
+              "status": "passed"
             },
-            "line": 26,
-            "name": "Login with correct login credentials",
-            "match": {},
+            "line": 6,
+            "name": "Login with correct credentials",
+            "match": {
+              "location": "LoginWithMap.userAndPasswordValueEntered(DataTable)"
+            },
             "rows": [
               {
                 "cells": [
-                  "test1212@gmail.com",
-                  "123456"
+                  "email",
+                  "password"
                 ],
-                "line": 27
+                "line": 7
               }
             ],
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1793004600,
+              "status": "passed"
             },
             "comments": [
               {
-                "line": 28,
+                "line": 8,
+                "value": "#  | test1212@gmail.com | 123456   |"
+              }
+            ],
+            "line": 9,
+            "name": "User logout successfully",
+            "match": {
+              "location": "LoginWithMap.userLogoutSuccessfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Action with map",
+    "description": "",
+    "id": "login-action-with-map",
+    "keyword": "Feature",
+    "uri": "LoginWithMap.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 20,
+        "name": "Login with valid credential",
+        "description": "",
+        "id": "login-action;login-with-valid-credential;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 21648800600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User on Home page",
+            "match": {
+              "location": "LoginWithMap.user_on_Home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2677423600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User go to login page",
+            "match": {
+              "location": "LoginWithMap.goTo_LoingPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 396186000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Login with \"test1212@gmail.com\" and \"123456\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "test1212@gmail.com",
+                  "offset": 12
+                },
+                {
+                  "val": "123456",
+                  "offset": 37
+                }
+              ],
+              "location": "LoginWithMap.loginWithAnd(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1497724900,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 16,
                 "value": "# Then My Dashboard is displayed"
               }
             ],
-            "line": 29,
+            "line": 17,
             "name": "User logout successfully",
             "match": {
-              "location": "LoignStepDefs.userLogoutSuccessfully()"
+              "location": "LoginWithMap.userLogoutSuccessfully()"
             },
             "keyword": "Then "
           }
