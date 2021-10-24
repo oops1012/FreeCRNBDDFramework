@@ -2,6 +2,8 @@ package StepDefinitions;
 
 import Util.Utilities;
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -16,11 +18,24 @@ import java.util.Map;
 
 public class LoginWithMap {
 
+    @Before
+    public void BeforeSetup() {
+        System.out.println("Start of the test.");
+        Utilities.driverSetup();
+        Utilities.driver.get("https://courses.ultimateqa.com/");
+    }
+
+    @After
+    public void TearDown() {
+        Utilities.driver.close();
+        System.out.println("Test completed and driver terminated");
+    }
 
     @Given("^User on Home page$")
     public void user_on_Home_page() {
-        Utilities.driverSetup();
-        Utilities.driver.get("https://courses.ultimateqa.com/");
+        /*Utilities.driverSetup();
+        Utilities.driver.get("https://courses.ultimateqa.com/");*/
+        System.out.println("driver setup and home has been navigated.");
     }
 
     @When("^User go to login page$")
@@ -65,7 +80,7 @@ public class LoginWithMap {
     public void userLogoutSuccessfully() {
         MyDashboardPage dash = new MyDashboardPage(Utilities.driver);
         dash.signOut();
-        Utilities.driver.close();
+       // Utilities.driver.close();
 
     }
 

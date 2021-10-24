@@ -3,99 +3,38 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "Login with valid credential",
-        "description": "",
-        "id": "login-action-with-map;login-with-valid-credential",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
+        "before": [
           {
             "result": {
-              "duration": 9410211400,
+              "duration": 8878487500,
               "status": "passed"
             },
-            "line": 4,
-            "name": "User on Home page",
             "match": {
-              "location": "LoginWithMap.user_on_Home_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1817267300,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "User go to login page",
-            "match": {
-              "location": "LoginWithMap.goTo_LoingPage()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3416500,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Login with correct credentials",
-            "match": {
-              "location": "LoginWithMap.userAndPasswordValueEntered(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "email",
-                  "password"
-                ],
-                "line": 7
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1793004600,
-              "status": "passed"
-            },
-            "comments": [
-              {
-                "line": 8,
-                "value": "#  | test1212@gmail.com | 123456   |"
-              }
-            ],
-            "line": 9,
-            "name": "User logout successfully",
-            "match": {
-              "location": "LoginWithMap.userLogoutSuccessfully()"
-            },
-            "keyword": "Then "
+              "location": "LoginWithMap.BeforeSetup()"
+            }
           }
-        ]
-      }
-    ],
-    "name": "Login Action with map",
-    "description": "",
-    "id": "login-action-with-map",
-    "keyword": "Feature",
-    "uri": "LoginWithMap.feature"
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
+        ],
         "line": 20,
         "name": "Login with valid credential",
         "description": "",
         "id": "login-action;login-with-valid-credential;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 210643200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginWithMap.TearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 21648800600,
+              "duration": 212371000,
               "status": "passed"
             },
             "line": 13,
@@ -107,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 2677423600,
+              "duration": 1830875100,
               "status": "passed"
             },
             "line": 14,
@@ -119,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 396186000,
+              "duration": 330620700,
               "status": "passed"
             },
             "line": 15,
@@ -145,7 +84,7 @@
           },
           {
             "result": {
-              "duration": 1497724900,
+              "duration": 2432016700,
               "status": "passed"
             },
             "comments": [
@@ -160,6 +99,12 @@
               "location": "LoginWithMap.userLogoutSuccessfully()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@test1"
           }
         ]
       }

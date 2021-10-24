@@ -1,83 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("LoginWithMap.feature");
-formatter.feature({
-  "line": 1,
-  "name": "Login Action with map",
-  "description": "",
-  "id": "login-action-with-map",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 3,
-  "name": "Login with valid credential",
-  "description": "",
-  "id": "login-action-with-map;login-with-valid-credential",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 4,
-  "name": "User on Home page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 5,
-  "name": "User go to login page",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 6,
-  "name": "Login with correct credentials",
-  "rows": [
-    {
-      "cells": [
-        "email",
-        "password"
-      ],
-      "line": 7
-    }
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 8,
-      "value": "#  | test1212@gmail.com | 123456   |"
-    }
-  ],
-  "line": 9,
-  "name": "User logout successfully",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginWithMap.user_on_Home_page()"
-});
-formatter.result({
-  "duration": 9410211400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginWithMap.goTo_LoingPage()"
-});
-formatter.result({
-  "duration": 1817267300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginWithMap.userAndPasswordValueEntered(DataTable)"
-});
-formatter.result({
-  "duration": 3416500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginWithMap.userLogoutSuccessfully()"
-});
-formatter.result({
-  "duration": 1793004600,
-  "status": "passed"
-});
-formatter.uri("login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("login.feature");
 formatter.feature({
   "line": 1,
   "name": "Login Action",
@@ -87,6 +8,10 @@ formatter.feature({
 });
 formatter.scenarioOutline({
   "comments": [
+    {
+      "line": 2,
+      "value": "#  @Test2"
+    },
     {
       "line": 3,
       "value": "#  Scenario: Login with valid credential"
@@ -121,7 +46,13 @@ formatter.scenarioOutline({
   "description": "",
   "id": "login-action;login-with-valid-credential",
   "type": "scenario_outline",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 11,
+      "name": "@test1"
+    }
+  ]
 });
 formatter.step({
   "line": 13,
@@ -174,13 +105,23 @@ formatter.examples({
   ],
   "keyword": "Examples"
 });
+formatter.before({
+  "duration": 8878487500,
+  "status": "passed"
+});
 formatter.scenario({
   "line": 20,
   "name": "Login with valid credential",
   "description": "",
   "id": "login-action;login-with-valid-credential;;2",
   "type": "scenario",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 11,
+      "name": "@test1"
+    }
+  ]
 });
 formatter.step({
   "line": 13,
@@ -216,14 +157,14 @@ formatter.match({
   "location": "LoginWithMap.user_on_Home_page()"
 });
 formatter.result({
-  "duration": 21648800600,
+  "duration": 212371000,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWithMap.goTo_LoingPage()"
 });
 formatter.result({
-  "duration": 2677423600,
+  "duration": 1830875100,
   "status": "passed"
 });
 formatter.match({
@@ -240,14 +181,18 @@ formatter.match({
   "location": "LoginWithMap.loginWithAnd(String,String)"
 });
 formatter.result({
-  "duration": 396186000,
+  "duration": 330620700,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWithMap.userLogoutSuccessfully()"
 });
 formatter.result({
-  "duration": 1497724900,
+  "duration": 2432016700,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 210643200,
   "status": "passed"
 });
 });

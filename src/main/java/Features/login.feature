@@ -1,5 +1,5 @@
 Feature: Login Action
-
+#  @Test2
 #  Scenario: Login with valid credential
 #    Given User on Home page
 #    When User go to login page
@@ -8,7 +8,7 @@ Feature: Login Action
 #   # Then My Dashboard is displayed
 #    Then User logout successfully
 
-
+@test1
   Scenario Outline: Login with valid credential
     Given User on Home page
     When User go to login page
@@ -20,7 +20,7 @@ Feature: Login Action
       | test1212@gmail.com | 123456    |
 
 
-#
+
 #  Scenario: Login with valid credential
 #    Given User on Home page
 #    When User go to login page
